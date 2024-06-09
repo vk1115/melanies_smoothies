@@ -28,6 +28,8 @@ ingredients_list = st.multiselect(
     , max_selections=5
 )
 
+import requests
+
 
 if ingredients_list :
 
@@ -57,7 +59,6 @@ if ingredients_list :
 
 my_dataframe = session.table("smoothies.public.orders").filter(col("ORDER_FILLED")==0).collect()
 
-import requests
 
 #st.text(fruityvice_response.json(),use_container_width=True)
 
